@@ -9,7 +9,11 @@ public class Veterinarian {
     private String address;
     private String phoneNumber;
 
-    public Veterinarian(){
+    public Veterinarian(String firstName, String lastName, String address, String phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
     }
 
     public void setFirstName(String firstName) {
