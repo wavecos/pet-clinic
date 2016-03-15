@@ -1,5 +1,7 @@
 package com.cursojava.petclinic.domain;
 
+import com.cursojava.petclinic.enums.Gender;
+
 /**
  * Created by academy on 3/11/16.
  */
@@ -8,6 +10,8 @@ public class Veterinarian {
     private String lastName;
     private String address;
     private String phoneNumber;
+    private Gender gender;
+
 
     public Veterinarian(String firstName, String lastName, String address, String phoneNumber) {
         this.firstName = firstName;
@@ -47,6 +51,17 @@ public class Veterinarian {
     public String getPhoneNumber() {
         return phoneNumber;
     }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+
+        this.gender = gender;
+    }
+
+
 
 
 }
