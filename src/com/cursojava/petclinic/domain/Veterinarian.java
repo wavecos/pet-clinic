@@ -9,6 +9,9 @@ public class Veterinarian {
     private String address;
     private String phoneNumber;
 
+    // Relaciones
+    private Clinic clinic;
+
     public Veterinarian(String firstName, String lastName, String address, String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -48,5 +51,11 @@ public class Veterinarian {
         return phoneNumber;
     }
 
+    public Clinic getClinic() {
+        return clinic;
+    }
 
+    public void setClinic(Clinic clinic) {
+        this.clinic = clinic;
+    }
 }

@@ -9,6 +9,15 @@ public class Clinic {
     private String nit;
     private int numberRoom;
     private String address;
+    // Relaciones
+    private Veterinarian[] veterinarians;
+
+    public Clinic() {
+    }
+
+    public Clinic(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
@@ -40,5 +49,13 @@ public class Clinic {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public Veterinarian[] getVeterinarians() {
+        return veterinarians;
+    }
+
+    public void setVeterinarians(Veterinarian[] veterinarians) {
+        this.veterinarians = veterinarians;
     }
 }
