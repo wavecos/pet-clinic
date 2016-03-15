@@ -1,7 +1,10 @@
 package com.cursojava.petclinic.domain;
 
+import com.cursojava.petclinic.enums.OwnerCity;
+
 /**
  * Created by academy on 3/11/16.
+
  */
 public class Owner {
 
@@ -9,6 +12,7 @@ public class Owner {
     private String lastName;
     private String phoneNumber;
     private String cellPhone;
+    private OwnerCity city;
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -41,5 +45,13 @@ public class Owner {
     public String getFirstName() {
 
         return firstName;
+    }
+
+    public OwnerCity getCity() {
+        return city;
+    }
+
+    public void setCity(OwnerCity city) {
+        this.city = city;
     }
 }
