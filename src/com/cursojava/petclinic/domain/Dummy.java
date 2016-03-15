@@ -7,6 +7,8 @@ public class Dummy {
 
     private String foo;
     private String bar;
+    private int years;
+    private double money;
 
     public String getFoo() {
         return foo;
@@ -23,4 +25,5 @@ public class Dummy {
     public void setBar(String bar) {
         this.bar = bar;
     }
+
 }

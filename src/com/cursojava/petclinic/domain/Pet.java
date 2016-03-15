@@ -1,12 +1,14 @@
 package com.cursojava.petclinic.domain;
 
+import com.cursojava.petclinic.enums.HairColor;
+
 /**
  * Created by Hortencia on 11/03/2016.
  */
 public class Pet {
     private String namePet;
     private int age;
-    private String hairColor;
+    private HairColor hairColor;
     private String breed;
 
     public String getNamePet() {
@@ -25,11 +27,11 @@ public class Pet {
         this.age = age;
     }
 
-    public String getHairColor() {
+    public HairColor getHairColor() {
         return hairColor;
     }
 
-    public void setHairColor(String hairColor) {
+    public void setHairColor(HairColor hairColor) {
         this.hairColor = hairColor;
     }
 
