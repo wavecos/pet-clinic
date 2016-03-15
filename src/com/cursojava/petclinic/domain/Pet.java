@@ -1,5 +1,6 @@
 package com.cursojava.petclinic.domain;
 
+import com.cursojava.petclinic.enums.Breed;
 import com.cursojava.petclinic.enums.HairColor;
 
 /**
@@ -9,7 +10,7 @@ public class Pet {
     private String namePet;
     private int age;
     private HairColor hairColor;
-    private String breed;
+    private Breed breed;
 
     public String getNamePet() {
         return namePet;
@@ -35,11 +36,11 @@ public class Pet {
         this.hairColor = hairColor;
     }
 
-    public String getBreed() {
+    public Breed getBreed() {
         return breed;
     }
 
-    public void setBreed(String breed) {
+    public void setBreed(Breed breed) {
         this.breed = breed;
     }
 }
