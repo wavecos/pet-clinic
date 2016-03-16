@@ -14,6 +14,10 @@ public class Owner {
     private String cellPhone;
     private OwnerCity city;
 
+    //Relaciones
+
+    private Pet[] pet;
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }

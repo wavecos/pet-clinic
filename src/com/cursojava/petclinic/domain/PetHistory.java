@@ -15,6 +15,9 @@ public class PetHistory {
     private String medicalPrescription;
     private String observation;
 
+    //Relaciones
+    private Pet pet;
+
 
     public String getHistoryCode() {
         return historyCode;
