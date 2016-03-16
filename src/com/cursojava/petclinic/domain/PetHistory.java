@@ -9,12 +9,11 @@ public class PetHistory {
 
     private String historyCode;
     private Date dateVisit;
-    private Veterinarian veterian;
+    private Veterinarian veterinarian;
     private Pet patient;
     private String diagnostic;
     private String medicalPrescription;
     private String observation;
-
     //Relaciones
     private Pet pet;
 
@@ -35,12 +34,12 @@ public class PetHistory {
         this.dateVisit = dateVisit;
     }
 
-    public Veterinarian getVeterian() {
-        return veterian;
+    public Veterinarian getVeterinarian() {
+        return veterinarian;
     }
 
-    public void setVeterian(Veterinarian veterian) {
-        this.veterian = veterian;
+    public void setVeterinarian(Veterinarian veterinarian) {
+        this.veterinarian = veterinarian;
     }
 
     public Pet getPatient() {
@@ -73,5 +72,12 @@ public class PetHistory {
 
     public void setObservation(String observation) {
         this.observation = observation;
+    }
+    public Pet getPet() {
+        return pet;
+    }
+
+    public void setPet(Pet pet) {
+        this.pet = pet;
     }
 }

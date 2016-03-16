@@ -13,10 +13,11 @@ public class Owner {
     private String phoneNumber;
     private String cellPhone;
     private OwnerCity city;
-
     //Relaciones
+    private Pet[] pets;
 
-    private Pet[] pet;
+
+
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -57,5 +58,12 @@ public class Owner {
 
     public void setCity(OwnerCity city) {
         this.city = city;
+    }
+    public Pet[] getPets() {
+        return pets;
+    }
+
+    public void setPets(Pet[] pets) {
+        this.pets = pets;
     }
 }
