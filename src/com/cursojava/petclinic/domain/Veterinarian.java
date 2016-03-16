@@ -15,6 +15,7 @@ public class Veterinarian {
 
     // Relaciones
     private Clinic clinic;
+    private Schedule[] schedules;
 
     public Veterinarian(String firstName, String lastName, String address, String phoneNumber) {
         this.firstName = firstName;
@@ -72,6 +73,11 @@ public class Veterinarian {
         this.clinic = clinic;
     }
 
+    public Schedule[] getSchedules() {
+        return schedules;
+    }
 
-
+    public void setSchedules(Schedule[] schedules) {
+        this.schedules = schedules;
+    }
 }
