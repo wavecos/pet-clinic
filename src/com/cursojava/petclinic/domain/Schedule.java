@@ -13,7 +13,6 @@ public class Schedule {
     private String medicalRoom ;
     //Relaciones
 
-    private Pet pet;
 
     public Schedule(Date dateVisit, Veterinarian veterinarianOnDuty, Pet patient, String medicalRoom) {
         this.dateVisit = dateVisit;
@@ -54,11 +53,4 @@ public class Schedule {
         return medicalRoom;
     }
 
-    public Pet getPet() {
-        return pet;
-    }
-
-    public void setPet(Pet pet) {
-        this.pet = pet;
-    }
 }
