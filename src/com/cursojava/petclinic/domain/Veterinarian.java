@@ -11,6 +11,8 @@ public class Veterinarian extends Person {
     private Clinic clinic;
     private Schedule[] schedules;
 
+    public Veterinarian(){}
+
     public Veterinarian(String firstName, String lastName, String address, String phoneNumber) {
         super(firstName, lastName, "0");
         super.setAddress(address);
@@ -31,5 +33,16 @@ public class Veterinarian extends Person {
 
     public void setSchedules(Schedule[] schedules) {
         this.schedules = schedules;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if ( !(obj instanceof Veterinarian) ) {
+            return false;
+        }
+
+        Veterinarian p2 = (Veterinarian) obj;
+        return //super.equals(p2()) &&
+                this.clinic.equals(p2.getClinic()) &&
+                this.schedules.equals(p2.getSchedules());
     }
 }

@@ -13,6 +13,7 @@ public class Schedule {
     private String medicalRoom ;
     //Relaciones
 
+    public Schedule() {}
 
     public Schedule(Date dateVisit, Veterinarian veterinarianOnDuty, Pet patient, String medicalRoom) {
         this.dateVisit = dateVisit;
@@ -53,4 +54,17 @@ public class Schedule {
         return medicalRoom;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if ( !(obj instanceof Schedule) ) {
+            return false;
+        }
+
+        Schedule p2 = (Schedule) obj;
+        return  this.dateVisit == p2.dateVisit &&
+                this.veterinarianOnDuty.equals(p2.getVeterinarianOnDuty()) &&
+                this.patient.equals(p2.getPatient())&&
+                this.medicalRoom == p2.medicalRoom;
+
+    }
 }
