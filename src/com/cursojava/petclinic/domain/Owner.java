@@ -10,6 +10,7 @@ public class Owner extends Person {
 
     private OwnerCity city;
 
+
     public Owner() {
 
     }
@@ -34,5 +35,16 @@ public class Owner extends Person {
 
     public void setPets(Pet[] pets) {
         this.pets = pets;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if ( !(obj instanceof Owner) ) {
+            return false;
+        }
+
+        Owner p2 = (Owner) obj;
+        return super.equals(p2) &&
+                this.city.equals(p2.getCity());
     }
 }

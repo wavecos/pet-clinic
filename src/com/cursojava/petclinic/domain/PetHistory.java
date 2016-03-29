@@ -14,9 +14,8 @@ public class PetHistory {
     private String diagnostic;
     private String medicalPrescription;
     private String observation;
-    //Relaciones
-    private Pet pet;
 
+    public PetHistory () {}
 
     public String getHistoryCode() {
         return historyCode;
@@ -73,11 +72,18 @@ public class PetHistory {
     public void setObservation(String observation) {
         this.observation = observation;
     }
-    public Pet getPet() {
-        return pet;
-    }
 
-    public void setPet(Pet pet) {
-        this.pet = pet;
+
+    @Override
+    public boolean equals(Object obj) {
+        if ( !(obj instanceof PetHistory) ) {
+            return false;
+        }
+
+        PetHistory p2 = (PetHistory) obj;
+        return this.historyCode.equals(p2.getHistoryCode()) &&
+                this.dateVisit.equals(p2.getDateVisit()) &&
+                this.patient.equals(p2.getPatient()) &&
+                this.veterinarian.equals(p2.getVeterinarian());
     }
 }

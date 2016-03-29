@@ -34,6 +34,7 @@ public class Veterinarian extends Person {
     public void setSchedules(Schedule[] schedules) {
         this.schedules = schedules;
     }
+
     @Override
     public boolean equals(Object obj) {
         if ( !(obj instanceof Veterinarian) ) {
@@ -41,7 +42,7 @@ public class Veterinarian extends Person {
         }
 
         Veterinarian p2 = (Veterinarian) obj;
-        return //super.equals(p2()) &&
+        return  super.equals(p2) &&
                 this.clinic.equals(p2.getClinic()) &&
                 this.schedules.equals(p2.getSchedules());
     }

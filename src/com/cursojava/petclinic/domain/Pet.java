@@ -12,6 +12,9 @@ public class Pet {
     private HairColor hairColor;
     private Breed breed;
 
+
+    public Pet(){}
+
     public String getNamePet() {
         return namePet;
     }
@@ -44,4 +47,16 @@ public class Pet {
         this.breed = breed;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if ( !(obj instanceof Pet) ) {
+            return false;
+        }
+
+        Pet p2 = (Pet) obj;
+        return this.namePet.equals(p2.getNamePet()) &&
+                this.age==p2.getAge() &&
+                this.hairColor.equals(p2.getHairColor()) &&
+                this.breed.equals(p2.getBreed());
+    }
 }

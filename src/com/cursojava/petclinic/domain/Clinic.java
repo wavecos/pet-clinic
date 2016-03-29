@@ -58,4 +58,15 @@ final public class Clinic {
     public void setVeterinarians(Veterinarian[] veterinarians) {
         this.veterinarians = veterinarians;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if ( !(obj instanceof Clinic) ) {
+            return false;
+        }
+
+        Clinic p2 = (Clinic) obj;
+        return this.name.equals(p2.getName()) &&
+                this.nit.equals(p2.getNit());
+    }
 }
